@@ -32,10 +32,10 @@ r1.question("Please enter a number for factorial", numStr =>{
                 fact *=1;
             }
             console.log("The factorial of " + num + "is " + fact);
+        }
+        })
 
-)
-
-    } else if (choice === "3"){
+    } else if(choice === "3"){
         console.log("Existing Application");
     } else {
         console.log("Invalid Choice. Please Try Again");
