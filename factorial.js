@@ -14,10 +14,15 @@ console.log ("1. Say Hello");
 console.log ("2. Factorial");
 console.log ("Exit Application");
 console.log ("---------------------------");
+     console.log("-------------------------");
+   console.log("1.Say Hello ");
+   console.log("2. Factorial");
+   console.log("3. Exit Application");
+   console.log("-------------------------");
 
 r1.question("Enter your choice (1-3): ", choice => {
     console.logh(choice);
-
+ sayHello;
     if (choice === "1"){
                 console.log("Hello");
     } else if (choice === "2"){
@@ -29,7 +34,18 @@ r1.question("Enter your choice (1-3): ", choice => {
             }
         } )
         }
+        function sayHello(){
+     console.log("Hello");
+}
 
+function computeFactorial(){
+         console.log("Factorial");
 
+}
+ rl.question("Please enter a number for factorial: ", numStr =>{
+            let num = parseInt(numStr);
 
+ 
+
+ })
 mainMenu();
