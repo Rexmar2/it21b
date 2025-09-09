@@ -1,86 +1,35 @@
-const readline=require("readline");
+const readline = require("readline");
 
-const rl = readline.createInterface({
-    input:process.stdin,
-    output:process.stdout
-})
-
+const r1 = readline.createInterface({
+    input:porocess.stdin,
+    output: process.stdout}
+)
 
 function mainMenu(){
-   console.log("-------------------------");
-   console.log("1. Say Hello ");
-   console.log("2. Factorial");
-   console.log("3. Exit Application");
-   console.log("-------------------------");
 
-rl.question("Enter your Choice (1-3): ", choice =>{
-    console.log(choice);
+
+console.log ("---------------------------");
+console.log ("Factorial Application");
+console.log ("1. Say Hello");
+console.log ("2. Factorial");
+console.log ("Exit Application");
+console.log ("---------------------------");
+
+r1.question("Enter your choice (1-3): ", choice => {
+    console.logh(choice);
 
     if (choice === "1"){
-       sayHello();
-       
+                console.log("Hello");
     } else if (choice === "2"){
-        computeFactorial();
-
-    } else if (choice === "3"){
-       exitProgram();
+                console.log("Factorial");
+    } else if (choice === "3") {
+                console.log("Exiting Application");
     } else {
-        console.log("Invalid Choice. Please Try Again");
-    }
-})
-}
-
-function sayHello(){
-     console.log("Hello");
-     backToMenu();
-}
-
-function computeFactorial(){
-         console.log("Factorial");
-
-        rl.question("Please enter a number for factorial: ", numStr =>{
-            let num = parseInt(numStr);
-
-            if (isNaN(num) || num < 0){
-                console.log("Please enter a non-negative integer");
-                backToMenu();
-            } else {
-                let fact = 1;
-
-                for (let i=1; i <= num; i++){
-                    fact *=i;
-                }
-
-                console.log("The factorial of" + num + " is " + fact);
-                backToMenu();
+                console.log("Invalid Choice. Please try again!");
             }
-        })
-}
-
-function exitProgram(){
-        console.log("Exiting Application");
-        rl.close();
-        console.clear();
-}
-
-function backToMenu(){
-   console.log("-------------------------");
-   console.log("1. Back To Menu ");
-   console.log("2. Exit ");
-
-   rl.question("What would you like to do next? (1-2) ", (backToMenuChoice)=>{
+        } )
+        }
 
 
-    if(backToMenuChoice==="1"){
-        console.clear();
-        mainMenu();
-    }else if (backToMenuChoice==="2"){
-        exitProgram();
-    }else {
-        console.log("Invalid choice. Please Try Again!");
-        mainMenu();
-    }
-   })
-}
 
 mainMenu();
