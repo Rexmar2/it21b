@@ -1,5 +1,5 @@
 {
     "labels" : ["january", "February", "March", "April", "May", "june"],
-    "value" : []
+    "value" : [10,20,15,30,25,40]
 
 }
